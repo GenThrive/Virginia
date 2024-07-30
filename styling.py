@@ -1,8 +1,8 @@
 # ----------------------------------------------------------------------------
 # PAGE SETTINGS
 # ----------------------------------------------------------------------------
-app_title = 'PEEPs Dashboard - 2024'
-page_title = 'PEEPs 2024'
+app_title = 'New Hampshire Dashboard - 2024'
+page_title = 'New Hampshire 2024'
 sub_title = 'Filter on'
 filter_category_1 = 'Organization Data'
 filter_category_2 = 'Program Data'
@@ -10,9 +10,9 @@ filter_category_2 = 'Program Data'
 # ----------------------------------------------------------------------------
 # MAP SETTINGS
 # ----------------------------------------------------------------------------
-map_center_lat = 40.4995688
-map_center_lon = -107.5551554
-map_zoom = 4
+map_center_lat = 43.9957998
+map_center_lon = -72.8850918
+map_zoom = 5.872
 
 # Column in the dataset that maps to the featureidkey of the geojson.
 # This is what maps the data column to the geojson feature
