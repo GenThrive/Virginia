@@ -13,7 +13,7 @@ dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-table==5.0.0
 et-xmlfile==1.1.0
-Fiona==1.10b3
+Fiona==1.9.6
 Flask==2.2.5
 Flask-Compress==1.13
 future==0.18.3
