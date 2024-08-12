@@ -1,14 +1,13 @@
-import os
-import pathlib
+from pathlib import Path
 import pandas as pd
 
 
 # Load the Excel file
-data_filepath = pathlib.Path(__file__).parent.absolute()
-data_records_filepath = os.path.join(data_filepath,'data_records.xls')
+data_filepath = Path(__file__).parent.absolute()
+data_records_filepath = data_filepath / 'data_records.xls'
 
 # Define the names of sheets to be processed
-sheets_to_process = ['Programs', 'Organization']
+sheets_to_process = ['Organizations','Programs']
 
 # Load the Excel file
 xls = pd.ExcelFile(data_records_filepath, engine='openpyxl')
@@ -19,7 +18,7 @@ xls = pd.ExcelFile(data_records_filepath, engine='openpyxl')
 # columns_to_process = ['Services_Resources', 'Environmental_Themes', 'Program/Offering_Locations']
 
 # Process each sheet
-with pd.ExcelWriter('modified_file.xlsx', engine='openpyxl') as writer:
+with pd.ExcelWriter('data/modified_file.xlsx', engine='openpyxl') as writer:
     # Process each sheet specified in sheets_to_process
     for sheet_name in sheets_to_process:
         if sheet_name in xls.sheet_names:
@@ -34,5 +33,5 @@ with pd.ExcelWriter('modified_file.xlsx', engine='openpyxl') as writer:
             # Write the modified DataFrame back to a new sheet in the output file
             df.to_excel(writer, sheet_name=sheet_name, index=False)
 
-# Save the modified DataFrame to a new Excel file
-    df.to_excel('data/modified_file.xlsx', index=False, engine='openpyxl')
+# # Save the modified DataFrame to a new Excel file
+#     df.to_excel('data/modified_file.xlsx',sheet_name=sheet_name, index=False, engine='openpyxl')
