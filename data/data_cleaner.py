@@ -4,7 +4,7 @@ import pandas as pd
 
 # Load the Excel file
 data_filepath = Path(__file__).parent.absolute()
-data_records_filepath = data_filepath / 'data_records.xls'
+data_records_filepath = data_filepath / 'old_data_records.xls'
 
 # Define the names of sheets to be processed
 sheets_to_process = ['Organizations','Programs']
@@ -29,6 +29,17 @@ with pd.ExcelWriter('data/modified_file.xlsx', engine='openpyxl') as writer:
             for column in df.columns:
                 if df[column].dtype == 'object':  # Check if the column is of string type
                     df[column] = df[column].apply(lambda x: x.replace(",", ", ") if isinstance(x, str) else x)
+                
+                    df[column] = df[column].apply(lambda x: x.replace('1-19', '1-19%')if isinstance(x, str) else x)
+                    
+                    df[column] = df[column].apply(lambda x: x.replace('20-39', '20-39%')if isinstance(x, str) else x)
+                    
+                    df[column] = df[column].apply(lambda x: x.replace('40-59', '40-59%')if isinstance(x, str) else x)
+                    
+                    df[column] = df[column].apply(lambda x: x.replace('60-79', '60-79%')if isinstance(x, str) else x)
+                    
+                    df[column] = df[column].apply(lambda x: x.replace('80-100', '80-100%')if isinstance(x, str) else x)
+
 
             # Write the modified DataFrame back to a new sheet in the output file
             df.to_excel(writer, sheet_name=sheet_name, index=False)
