@@ -1,8 +1,8 @@
 # ----------------------------------------------------------------------------
 # PAGE SETTINGS
 # ----------------------------------------------------------------------------
-app_title = 'Virginia Dashboard - 2024'
-page_title = 'Virginia Dashboard 2024'
+app_title = 'Virginia Environmental Education Directory'
+page_title = 'Virginia Environmental Education Directory'
 sub_title = 'Filter on'
 filter_category_1 = 'Organization Data'
 filter_category_2 = 'Program Data'
@@ -12,7 +12,7 @@ filter_category_2 = 'Program Data'
 # ----------------------------------------------------------------------------
 map_center_lat = 37.9782627
 map_center_lon = -79.2605896
-map_zoom = 6
+map_zoom = 5.975
 
 # Column in the dataset that maps to the featureidkey of the geojson.
 # This is what maps the data column to the geojson feature

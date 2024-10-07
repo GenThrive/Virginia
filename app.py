@@ -121,12 +121,16 @@ test_div = html.Div()
 sidebar = html.Div(
     [
         html.H2(page_title),
+        html.Img(src='/assets/DCR_logo_RGB-1.png', style={'height':'175px','width':'100%', 'padding-bottom':'10px'}),
         html.H4(sub_title),
         html.H5(filter_category_1),
         dds_orgs,
-        html.H5(filter_category_2),
+        html.H5(filter_category_2, style={'padding-top':'10px'}),
         dds_programs,
-        html.Div(id='div-overview_msg')
+        html.Div(id='div-overview_msg'),
+        html.H6(['Powered by ',
+                 html.A('Gen:Thrive ',
+                        href='https://genthrive.org/', target='blank', style={'text-decoration':'none'}),html.Img(src='/assets/Generation-Thrive-ICON-Color-High-Res.png', style={'height':'15%', 'width':'15%'})], style={'padding-top':'1rem', 'padding-left':'10px', 'padding-right':'10px'}),
     ],
     style=SIDEBAR_STYLE,
 )
@@ -368,7 +372,7 @@ def build_barchart(data, input_barchart):
         cols = list(bar_data.columns)
         bar_data.columns = [col.replace('_y','') for col in cols]
         # bar_title = "{} (grouped by {})".format(bar_data.columns[0], title_group)
-        bar_title = "{}".format(bar_data.columns[0], title_group)
+        bar_title = "<b>{}</b>".format(bar_data.columns[0], title_group)
         bar_chart = make_bar(bar_data, 0, 1, layout_direction = 'v', marker_color=eco_color, title = bar_title, ascending=False)
         return  bar_chart
     except:
@@ -398,7 +402,7 @@ def build_piechart(data, input_piechart):
         pie_data.columns = [col.replace('_y','') for col in cols]
         name_col, value_col = pie_data.columns[0], pie_data.columns[1]
         # pie_title = "{} (grouped by {})".format(name_col, title_group)
-        pie_title = "{}".format(name_col)
+        pie_title = "<b>{}</b>".format(name_col)
 
         # Set label type from pie_chart
         # use try / except to use the value from pie_format if it works, else just use the textinfo = None
@@ -432,7 +436,7 @@ def build_barchart(data, input_barchart):
         cols = list(bar_data.columns)
         bar_data.columns = [col.replace('_y','') for col in cols]
         # bar_title = "{} ed by {})".format(bar_data.columns[0], title_group)
-        bar_title = "{}".format(bar_data.columns[0], title_group)
+        bar_title = "<b>{}</b>".format(bar_data.columns[0], title_group)
         bar_chart = make_bar(bar_data, 0, 1, layout_direction = 'h', marker_color=eco_color, title = bar_title, ascending=True)
         return  bar_chart
     except:
