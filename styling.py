@@ -12,13 +12,14 @@ filter_category_2 = 'Program Data'
 # ----------------------------------------------------------------------------
 map_center_lat = 37.9782627
 map_center_lon = -79.2605896
-map_zoom = 5.975
+map_zoom = 5.905
 
 # Column in the dataset that maps to the featureidkey of the geojson.
 # This is what maps the data column to the geojson feature
 # For Texas this is the column that  definse the area category of the ESC
 geojson_featureidkey='properties.FID'
 data_area_col = 'ESC'
+state_name = 'properties.STATE'
 
 # ----------------------------------------------------------------------------
 # STYLING
