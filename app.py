@@ -121,7 +121,7 @@ test_div = html.Div()
 sidebar = html.Div(
     [
         html.H2(page_title),
-        html.Img(src='/assets/DCR_logo_RGB-1.png', style={'height':'175px','width':'100%', 'padding-bottom':'10px'}),
+        html.Img(src='/assets/Virginia.png', style={'height':'175px','width':'100%', 'padding-bottom':'10px'}),
         html.H4(sub_title),
         html.H5(filter_category_1),
         dds_orgs,
