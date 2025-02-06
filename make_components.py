@@ -210,7 +210,7 @@ def make_map(orgdata, lat_col, lon_col, choro_geojson,  featureidkey, state_name
                zoom=map_zoom,
               center = {"lat": map_center_lat, "lon": map_center_lon},
               mapbox_style="open-street-map")
-    fig.update_traces(hovertemplate=f'<b>%{{{state_name}}}</b>')
+    fig.update_traces(hovertemplate=f'<b style="font-size:20px">%{{{state_name}}}</b>')
 
     # add pt layer to map
     for item in range(0,len(scatter_fig.data)):
