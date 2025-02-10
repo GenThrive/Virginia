@@ -26,9 +26,10 @@ state_name = 'properties.STATE'
 # ----------------------------------------------------------------------------
 
 # Set Color scales for Figures using the EcoRise brande color palette
-fulltint = ['#00A887','#B9D535','#FFC600','#FF8F12','#FF664B']
-tint_75 = ['#40BEA5','#CBE068','#FFC400','#FFAB4D','#FF8C78']
-tint_50 = ['#80D4C3','#DCEA9A','#FFE380','#FFC789','#FFB3A5']
+
+fulltint = ['#173D64','#345E88', '#AB5F13', '#F88E20', '#5DA039', '#FBB041']
+tint_75 = [' #5c7792','#708eab','#c48f59','#faaf62','#8dbc74','#fcc77a']
+tint_50 = ['#a2b1c1','#adbecf','#ddbfa0','#fcd1a5','#bed9af','#fddfb3']
 eco_color = fulltint + tint_75 + tint_50
 eco_color_r = fulltint[::-1] + tint_75[::-1] + tint_50[::-1]
 eco_color_desc = eco_color[::-1]
