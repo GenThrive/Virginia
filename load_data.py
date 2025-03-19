@@ -85,7 +85,7 @@ orgs_cols_keep = ['orgID'] + list(directory_df[(directory_df.table_name == 'Orga
 pg_cols_keep = ['programID','orgID','State'] + list(directory_df[(directory_df.table_name == 'Programs') & (directory_df.directory_column_order > 0)]['column_name'])
 
 # subset the data
-orgs_geo = orgs[['orgID', 'Latitude', 'Longitude']]
+orgs_geo = orgs[['orgID', 'wpcf-address_latitude', 'wpcf-address_longitude']]
 orgs = orgs[orgs_cols_keep]
 programs = programs[pg_cols_keep]
 
